@@ -32,9 +32,17 @@ header nav > ul {
     align-items:center;
 }
 header nav > ul > li {padding:0 10px; position:relative;}
+header nav > ul > li:nth-child(4):hover .sub {
+    display:block;
+    transform:translateY(95px);
+    transition:transform 1s ease;
+}
+
 header nav > ul > li > a {}
 header nav > ul > li > .sub {
-    position:absolute; 
+    position:absolute;
+    top:-85px;
+    display:none;
 }
 header nav > ul > li > .sub li {width:100px; padding: 10px 0 0;}
 header nav > ul > li > .sub li a {}
