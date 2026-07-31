@@ -27,21 +27,26 @@
         }
         main .video_bg {
             width:790px; height:640px; position:relative;
-            overflow:hidden; 
+            overflow:hidden;
         }
         main .video_bg video {
             position:absolute;
             left:-100px; top:-200px; z-index:10;
         }
-        main .video_bg img {
+        main .video_bg img {/* D */
             position:absolute; 
             left:0; top:0; z-index:20;
             width:100%;
         }
         main .txt_bg_ani {
-            background:url(images/bg_flow.png) repeat-x left top;
-            height:150px; width:100%;
-            position:absolute; z-index:30;
+            background:url(images/bg_flow.png) repeat-x left center;
+            height:640px; width:100%;
+            position:absolute; z-index:15;
+            animation:bg 40s infinite linear;
+        }
+        @keyframes bg {
+            0% {background-position:0;}
+            100% {background-position:5000px;}
         }
     </style>
 </head>
@@ -55,8 +60,8 @@
             <div class="video_bg">
                 <video src="video/golden.mp4" autoplay muted loop></video>
                 <img src="images/img_intro.png" alt="">
+                <div class="txt_bg_ani"></div>
             </div>
-            <div class="txt_bg_ani"></div>
         </div>
     </main>
 </body>
